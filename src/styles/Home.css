@@ -4,6 +4,8 @@
    Ce fichier : couleurs, typographie custom, styles spécifiques
    ============================================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@700;800&family=Share+Tech+Mono&family=Exo+2:wght@300;400&display=swap');
+
 /* ---- Section ---- */
 
 .home {
@@ -21,21 +23,77 @@
 /* ---- Texte ---- */
 
 .home-name {
-  font-size: 2.5rem;
+  font-family: 'Oxanium', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
   color: #f0f0f0;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.home-name span {
+  color: #ff6b00;
+}
+
+.home-role-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 20px;
 }
 
 .home-role {
-  font-size: 1.1rem;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
   color: #ff6b00;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  width: calc(28ch + 90px);
+  animation: typing 2s steps(28) 0.5s both;
+}
+
+.home-role::before {
+  content: '// ';
+  opacity: 0.5;
+}
+
+.home-role-cursor {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  color: #ff6b00;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: calc(28ch + 90px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 .home-description {
-  font-size: 1rem;
-  color: #888;
-  line-height: 1.8;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.9;
+  opacity: 0;
+  animation: fadein 0.6s ease 2.4s forwards;
+}
+
+@keyframes fadein {
+  to { opacity: 1; }
+}
+
+.home-description span {
+  color: #ff6b00;
 }
 
 /* ---- Boutons ---- */
