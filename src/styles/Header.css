@@ -1,0 +1,40 @@
+/* Header */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+.nav-link {
+  font-family: 'Michroma', sans-serif;
+  color: #F0F0F0 !important;
+  border: 1px solid rgba(255, 107, 0, 0.12);
+  border-radius: 20px;
+  padding: 6px 14px !important;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #FFB347 !important;
+  border-color: rgba(255, 107, 0, 0.35);
+  background-color: rgba(255, 107, 0, 0.06);
+}
+
+.nav-link.active {
+  color: #FF6B00 !important;
+  border-color: rgba(255, 107, 0, 0.55);
+  background-color: rgba(255, 107, 0, 0.12);
+}
+
+.nav-link.nav-cta {
+  color: #0AFFEF !important;
+  border-color: rgba(10, 255, 239, 0.12);
+}
+
+.nav-link.nav-cta:hover {
+  color: #0AFFEF !important;
+  border-color: rgba(10, 255, 239, 0.35);
+  background-color: rgba(10, 255, 239, 0.06);
+}
+
+.nav-link.nav-cta.active {
+  color: #0AFFEF !important;
+  border-color: rgba(10, 255, 239, 0.55);
+  background-color: rgba(10, 255, 239, 0.12);
+}
