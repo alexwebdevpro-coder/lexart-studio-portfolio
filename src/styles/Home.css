@@ -17,7 +17,6 @@
 
 .home-logotype {
   max-width: 800px;
-  width: 100%;
 }
 
 /* ---- Texte ---- */
@@ -37,8 +36,6 @@
 }
 
 .home-role-wrapper {
-  display: flex;
-  align-items: center;
   gap: 0;
   margin-bottom: 20px;
 }
@@ -46,11 +43,8 @@
 .home-role {
   font-family: 'Share Tech Mono', sans-serif;
   font-size: 0.9rem;
-  font-weight: 400;
   color: #ff6b00;
   letter-spacing: 3px;
-  text-transform: uppercase;
-  overflow: hidden;
   white-space: nowrap;
   width: calc(28ch + 90px);
   animation: typing 2s steps(28) 0.5s both;
@@ -99,13 +93,10 @@
 /* ---- Boutons ---- */
 
 .home-btn-primary {
-  display: inline-block;
   padding: 12px 32px;
   background: #ff6b00;
   color: #0d0d0d;
-  text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
   border: none;
@@ -121,11 +112,8 @@
 }
 
 .home-btn-secondary {
-  display: inline-block;
   padding: 12px 32px;
-  background: transparent;
   color: #ff6b00;
-  text-decoration: none;
   font-size: 0.95rem;
   letter-spacing: 1px;
   cursor: pointer;
@@ -155,7 +143,6 @@
 /* ---- Photo ---- */
 
 .home-photo-wrapper {
-  position: relative;
   width: 480px;
   height: 480px;
   padding: 12px;
@@ -180,8 +167,6 @@
 }
 
 .home-photo {
-  width: 100%;
-  height: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
