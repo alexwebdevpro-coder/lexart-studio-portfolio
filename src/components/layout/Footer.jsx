@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { IconInstagram, IconLinkedin, IconFacebook, IconGithub } from "../ui/Icons";
 import "../../styles/Footer.css";
 
 function Footer() {
@@ -16,16 +17,16 @@ function Footer() {
             </p>
             <div className="d-flex gap-2">
               <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i className="bi bi-instagram"></i>
+                <IconInstagram />
               </a>
               <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i className="bi bi-linkedin"></i>
+                <IconLinkedin />
               </a>
               <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i className="bi bi-facebook"></i>
+                <IconFacebook />
               </a>
               <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i className="bi bi-github"></i>
+                <IconGithub />
               </a>
             </div>
           </div>

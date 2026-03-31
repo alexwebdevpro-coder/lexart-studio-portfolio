@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { IconArrowRight, IconArrowLeft, IconHexagon, IconGlobe, IconGithub } from './Icons'
 import '../../styles/CardPortfolio.css'
 
 function CardPortfolio({ label, img, title, desc, tags, link, github }) {
@@ -17,7 +18,7 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
           <div className="portfolio-card__glow"></div>
 
           <div className="portfolio-img-wrap">
-            <img src={img} alt={title} className="portfolio-img" />
+            <img src={img} alt={title} className="portfolio-img" loading="lazy" />
             <div className="portfolio-img-overlay"></div>
             <span className="portfolio-label text-uppercase">{label}</span>
           </div>
@@ -35,7 +36,7 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
                 className="portfolio-btn-flip"
                 onClick={() => setFlipped(true)}
               >
-                VOIR LE PROJET <i className="bi bi-arrow-right ms-1"></i>
+                VOIR LE PROJET <span style={{ marginLeft: '0.25rem' }}><IconArrowRight /></span>
               </button>
             </div>
           </div>
@@ -49,7 +50,7 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
           <div className="card-corner-p-br"></div>
 
           <div className="back-hex">
-            <i className="bi bi-hexagon"></i>
+            <IconHexagon />
           </div>
 
           <span className="back-label">{label}</span>
@@ -59,31 +60,31 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
           <div className="back-actions">
             {link && link !== '#' ? (
               <a href={link} className="back-btn" target="_blank" rel="noreferrer">
-                <i className="bi bi-globe2"></i>
+                <IconGlobe />
                 VOIR LE SITE
               </a>
             ) : (
               <span className="back-btn back-btn--disabled">
-                <i className="bi bi-globe2"></i>
+                <IconGlobe />
                 SITE INDISPONIBLE
               </span>
             )}
 
             {github ? (
               <a href={github} className="back-btn back-btn--github" target="_blank" rel="noreferrer">
-                <i className="bi bi-github"></i>
+                <IconGithub />
                 VOIR GITHUB
               </a>
             ) : (
               <span className="back-btn back-btn--github back-btn--disabled">
-                <i className="bi bi-github"></i>
+                <IconGithub />
                 REPO PRIVÉ
               </span>
             )}
           </div>
 
           <button className="back-return" onClick={() => setFlipped(false)}>
-            <i className="bi bi-arrow-left me-1"></i> RETOUR
+            <span style={{ marginRight: '0.25rem' }}><IconArrowLeft /></span> RETOUR
           </button>
         </div>
 

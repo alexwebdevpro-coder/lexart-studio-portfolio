@@ -1,16 +1,18 @@
-import { useRef } from 'react'
+import { useRef, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Portfolio from './pages/Portfolio'
-import Services from './pages/Services'
-import Mentions from './pages/Mentions'
-import Politique from './pages/Politique'
+import ErrorBoundary from './components/ui/ErrorBoundary'
 import { useParticles } from './hooks/useParticles'
 import './styles/App.css'
+
+const Home      = lazy(() => import('./pages/Home'))
+const About     = lazy(() => import('./pages/About'))
+const Contact   = lazy(() => import('./pages/Contact'))
+const Portfolio = lazy(() => import('./pages/Portfolio'))
+const Services  = lazy(() => import('./pages/Services'))
+const Mentions  = lazy(() => import('./pages/Mentions'))
+const Politique = lazy(() => import('./pages/Politique'))
 
 function App() {
   const canvasRef = useRef(null)
@@ -23,15 +25,19 @@ function App() {
         <canvas ref={canvasRef} className="app-particles"></canvas>
         <Header />
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/mentions-legales" element={<Mentions />} />
-            <Route path="/politique-de-confidentialite" element={<Politique />} />
-          </Routes>
+          <ErrorBoundary>
+            <Suspense fallback={null}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/mentions-legales" element={<Mentions />} />
+                <Route path="/politique-de-confidentialite" element={<Politique />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
         </main>
         <Footer />
       </div>

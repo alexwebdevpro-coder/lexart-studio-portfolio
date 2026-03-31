@@ -1,6 +1,6 @@
-import imgEden from '../assets/image/Site-Eden-Photographie.png'
-import imgJohnDoe from '../assets/image/Desktop_John_Doe_Home.png'
-import imgCV from '../assets/image/CV-Capture.png'
+import imgEden from '../assets/image/Site-Eden-Photographie.webp'
+import imgJohnDoe from '../assets/image/Desktop_John_Doe_Home.webp'
+import imgCV from '../assets/image/CV-Capture.webp'
 
 export const projects = [
   {
