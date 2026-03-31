@@ -10,6 +10,7 @@ export const projects = [
     desc: "Site vitrine pour une photographe professionnelle. Mise en valeur des galeries, navigation fluide et design épuré.",
     tags: ["HTML", "CSS", "JavaScript"],
     link: "#",
+    github: null,
   },
   {
     label: "PROJ-02",
@@ -18,6 +19,7 @@ export const projects = [
     desc: "Portfolio fictif pour un développeur web. Structure moderne, responsive et orientée conversion.",
     tags: ["HTML", "CSS", "Bootstrap"],
     link: "#",
+    github: null,
   },
   {
     label: "PROJ-03",
@@ -26,5 +28,6 @@ export const projects = [
     desc: "Curriculum vitae au format numérique, structuré et optimisé pour une lecture rapide.",
     tags: ["HTML", "CSS"],
     link: "#",
+    github: null,
   },
 ]
