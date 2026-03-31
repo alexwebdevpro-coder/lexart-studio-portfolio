@@ -24,10 +24,6 @@
   animation: scanMove 8s linear infinite;
 }
 
-@keyframes scanMove {
-  0%   { background-position: 0 0; }
-  100% { background-position: 0 100px; }
-}
 
 /* ── Grid lines ─────────────────────────────────────────────── */
 .cy-grid-lines {

@@ -37,11 +37,7 @@
   );
   pointer-events: none;
   z-index: 0;
-  animation: scanmove 8s linear infinite;
-}
-@keyframes scanmove {
-  from { background-position: 0 0; }
-  to   { background-position: 0 200px; }
+  animation: scanMove 8s linear infinite;
 }
 
 /* ── Light sweep ────────────────────────────────────────── */
@@ -80,11 +76,7 @@
   width: 7px;
   height: 7px;
   background: var(--c-primary);
-  animation: dotpulse 2s ease-in-out infinite;
-}
-@keyframes dotpulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.4; transform: scale(0.7); }
+  animation: pulse 2s ease-in-out infinite;
 }
 .cp-logo-box svg { width: 16px; height: 16px; }
 
@@ -130,10 +122,6 @@
   background: var(--c-primary);
   flex-shrink: 0;
   animation: pulse 1.4s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.3; transform: scale(0.6); }
 }
 .cp-status-text {
   font-family: 'Share Tech Mono', monospace;

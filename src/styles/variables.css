@@ -9,3 +9,14 @@
   --c-bg:          #0d0d0d;
   --c-text:        #f0f0f0;
 }
+
+/* ── Animations globales partagées ──────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+@keyframes scanMove {
+  from { background-position: 0 0; }
+  to   { background-position: 0 200px; }
+}
