@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Title from "../components/ui/Title";
 import photo from "../assets/image/Photo-About.JPG";
 import "../styles/About.css";
@@ -169,6 +170,10 @@ function About() {
                 </div>
 
               </div>
+            </div>
+
+            <div className={`fade-in mt-5${animate ? " visible" : ""}`} style={{ transitionDelay: "0.6s" }}>
+              <Link to="/portfolio" className="btn-primary">VOIR MES PROJETS</Link>
             </div>
 
           </div>
