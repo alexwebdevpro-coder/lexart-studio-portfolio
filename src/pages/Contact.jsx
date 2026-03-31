@@ -46,14 +46,14 @@ function Contact() {
               <label className="cy-label d-flex align-items-center text-uppercase">
                 <span className="cy-label-arrow">&gt;</span> Nom et prénom
               </label>
-              <input className="cy-input" type="text" placeholder="Jean Dupont" />
+              <input className="cy-input w-100" type="text" placeholder="Jean Dupont" />
             </div>
             <div className="col-12 col-sm-6">
               <label className="cy-label d-flex align-items-center text-uppercase">
                 <span className="cy-label-arrow">&gt;</span> Entreprise
                 <span className="cy-label-opt">(optionnel)</span>
               </label>
-              <input className="cy-input" type="text" placeholder="Nom de l'entreprise" />
+              <input className="cy-input w-100" type="text" placeholder="Nom de l'entreprise" />
             </div>
           </div>
 
@@ -62,28 +62,28 @@ function Contact() {
               <label className="cy-label d-flex align-items-center text-uppercase">
                 <span className="cy-label-arrow">&gt;</span> Adresse e-mail
               </label>
-              <input className="cy-input" type="email" placeholder="jean.dupont@email.com" />
+              <input className="cy-input w-100" type="email" placeholder="jean.dupont@email.com" />
             </div>
             <div className="col-12 col-sm-6">
               <label className="cy-label d-flex align-items-center text-uppercase">
                 <span className="cy-label-arrow">&gt;</span> Numéro de téléphone
               </label>
-              <input className="cy-input" type="tel" placeholder="+33 6 00 00 00 00" />
+              <input className="cy-input w-100" type="tel" placeholder="+33 6 00 00 00 00" />
             </div>
           </div>
 
           <div className="mb-3">
-            <label className="cy-label">
+            <label className="cy-label d-flex align-items-center text-uppercase">
               <span className="cy-label-arrow">&gt;</span> Sujet
             </label>
-            <input className="cy-input" type="text" placeholder="Votre sujet..." />
+            <input className="cy-input w-100" type="text" placeholder="Votre sujet..." />
           </div>
 
           <div className="mb-3">
-            <label className="cy-label">
+            <label className="cy-label d-flex align-items-center text-uppercase">
               <span className="cy-label-arrow">&gt;</span> Message
             </label>
-            <textarea className="cy-input" placeholder="Votre message..."></textarea>
+            <textarea className="cy-input w-100" placeholder="Votre message..."></textarea>
           </div>
 
           <div className="text-center mt-4">
