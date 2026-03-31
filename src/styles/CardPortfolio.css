@@ -79,32 +79,8 @@
 }
 
 /* ── Coins décoratifs ───────────────────────────────────────── */
-.card-corner-p-tl,
-.card-corner-p-tr,
-.card-corner-p-bl,
-.card-corner-p-br {
-  width: 14px;
-  height: 14px;
-  border-color: var(--c-primary);
-  border-style: solid;
-  transition: width 0.3s ease, height 0.3s ease;
-  z-index: 5;
-  position: absolute;
-}
-
-.card-corner-p-tl { top: 6px; left: 6px;     border-width: 2px 0 0 2px; }
-.card-corner-p-tr { top: 6px; right: 6px;    border-width: 2px 2px 0 0; }
-.card-corner-p-bl { bottom: 6px; left: 6px;  border-width: 0 0 2px 2px; }
-.card-corner-p-br { bottom: 6px; right: 6px; border-width: 0 2px 2px 0; }
-
-.flip-card-front:hover .card-corner-p-tl,
-.flip-card-front:hover .card-corner-p-tr,
-.flip-card-front:hover .card-corner-p-bl,
-.flip-card-front:hover .card-corner-p-br,
-.flip-card-back .card-corner-p-tl,
-.flip-card-back .card-corner-p-tr,
-.flip-card-back .card-corner-p-bl,
-.flip-card-back .card-corner-p-br {
+.flip-card-front:hover .cyber-corner,
+.flip-card-back .cyber-corner {
   width: 20px;
   height: 20px;
 }

@@ -5,10 +5,10 @@ import '../../styles/CardPortfolio.css'
 function Corners() {
   return (
     <>
-      <div className="card-corner-p-tl"></div>
-      <div className="card-corner-p-tr"></div>
-      <div className="card-corner-p-bl"></div>
-      <div className="card-corner-p-br"></div>
+      <div className="cyber-corner tl"></div>
+      <div className="cyber-corner tr"></div>
+      <div className="cyber-corner bl"></div>
+      <div className="cyber-corner br"></div>
     </>
   )
 }

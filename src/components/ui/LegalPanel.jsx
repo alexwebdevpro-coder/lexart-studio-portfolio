@@ -4,10 +4,10 @@ import '../../styles/AccordionItem.css'
 function LegalPanel({ title, subtitle, statusText, total, openCount, clock, children }) {
   return (
     <div className="cp-root w-100 position-relative overflow-hidden">
-      <div className="cp-corner tl position-absolute"></div>
-      <div className="cp-corner tr position-absolute"></div>
-      <div className="cp-corner bl position-absolute"></div>
-      <div className="cp-corner br position-absolute"></div>
+      <div className="cyber-corner tl position-absolute"></div>
+      <div className="cyber-corner tr position-absolute"></div>
+      <div className="cyber-corner bl position-absolute"></div>
+      <div className="cyber-corner br position-absolute"></div>
       <div className="cp-scanlines position-absolute top-0 start-0 w-100 h-100"></div>
       <div className="cp-sweep position-absolute top-0 h-100"></div>
 

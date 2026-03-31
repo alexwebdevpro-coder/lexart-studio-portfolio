@@ -14,17 +14,6 @@
   margin: 2rem auto;
 }
 
-/* ── Corner decorations ─────────────────────────────────── */
-.cp-corner {
-  width: 14px;
-  height: 14px;
-  border-color: var(--c-primary);
-  border-style: solid;
-}
-.cp-corner.tl { top: 5px;    left: 5px;  border-width: 2px 0 0 2px; }
-.cp-corner.tr { top: 5px;    right: 5px; border-width: 2px 2px 0 0; }
-.cp-corner.bl { bottom: 5px; left: 5px;  border-width: 0 0 2px 2px; }
-.cp-corner.br { bottom: 5px; right: 5px; border-width: 0 2px 2px 0; }
 
 /* ── Scanlines overlay ──────────────────────────────────── */
 .cp-scanlines {
