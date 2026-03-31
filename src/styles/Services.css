@@ -29,8 +29,6 @@
   background: rgba(10, 8, 4, 0.85);
   border: 1px solid rgba(255, 100, 0, 0.35);
   border-radius: 4px;
-  position: relative;
-  overflow: hidden;
   cursor: pointer;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -61,7 +59,6 @@
 }
 
 .card-corner-tr {
-  position: absolute;
   top: 6px;
   right: 6px;
   width: 14px;
@@ -73,7 +70,6 @@
 }
 
 .card-corner-bl {
-  position: absolute;
   bottom: 6px;
   left: 6px;
   width: 14px;
@@ -86,7 +82,6 @@
 
 /* ── Glow radial ────────────────────────────────────────────── */
 .service-card__glow {
-  position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 50% 0%, rgba(255, 100, 0, 0.12) 0%, transparent 70%);
   opacity: 0;
@@ -97,7 +92,6 @@
 
 /* ── Scan streak ────────────────────────────────────────────── */
 .service-card__streak {
-  position: absolute;
   left: 0;
   right: 0;
   height: 2px;
@@ -111,7 +105,6 @@
 
 /* ── Code hexadécimal décoratif ─────────────────────────────── */
 .service-card__hex {
-  position: absolute;
   bottom: 8px;
   right: 10px;
   font-family: 'Orbitron', monospace;
@@ -129,7 +122,6 @@
   font-weight: 700;
   letter-spacing: 3px;
   color: rgba(255, 100, 0, 0.5);
-  text-transform: uppercase;
   margin-bottom: 4px;
 }
 
@@ -139,7 +131,6 @@
   color: #ff6400;
   filter: drop-shadow(0 0 10px rgba(255, 100, 0, 0.7));
   margin-bottom: 0.8rem;
-  display: block;
   transition: filter 0.3s ease;
   position: relative;
   z-index: 1;
@@ -152,7 +143,6 @@
   font-weight: 700;
   color: #ff6400;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
   margin-bottom: 0.6rem;
   line-height: 1.2;
   filter: drop-shadow(0 0 6px rgba(255, 100, 0, 0.5));
