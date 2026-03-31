@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logotype from "../assets/svg/lexart_studio_logotype_v2.svg";
-import photo from "../assets/image/Photo-Home2.JPG";
+import photo from "../assets/image/Photo-Home2.webp";
 import "../styles/Home.css";
 
 function Home() {

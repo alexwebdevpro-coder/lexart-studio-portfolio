@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Title from "../components/ui/Title";
-import photo from "../assets/image/Photo-About.JPG";
+import photo from "../assets/image/Photo-About.webp";
 import { stats, timeline, tags } from "../data/about";
 import "../styles/About.css";
 
