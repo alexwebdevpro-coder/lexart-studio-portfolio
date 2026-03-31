@@ -190,3 +190,8 @@ textarea.cy-input {
   color: #00ff88;
   border-color: #00ff88;
 }
+
+.cy-btn.error {
+  color: #ff4444;
+  border-color: #ff4444;
+}
