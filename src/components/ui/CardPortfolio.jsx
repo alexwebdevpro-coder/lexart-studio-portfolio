@@ -2,6 +2,17 @@ import { useState } from 'react'
 import { IconArrowRight, IconArrowLeft, IconHexagon, IconGlobe, IconGithub } from './Icons'
 import '../../styles/CardPortfolio.css'
 
+function Corners() {
+  return (
+    <>
+      <div className="card-corner-p-tl"></div>
+      <div className="card-corner-p-tr"></div>
+      <div className="card-corner-p-bl"></div>
+      <div className="card-corner-p-br"></div>
+    </>
+  )
+}
+
 function CardPortfolio({ label, img, title, desc, tags, link, github }) {
   const [flipped, setFlipped] = useState(false)
 
@@ -11,10 +22,7 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
 
         {/* ── FACE AVANT ───────────────────────────────────── */}
         <div className="flip-card-front">
-          <div className="card-corner-p-tl"></div>
-          <div className="card-corner-p-tr"></div>
-          <div className="card-corner-p-bl"></div>
-          <div className="card-corner-p-br"></div>
+          <Corners />
           <div className="portfolio-card__glow"></div>
 
           <div className="portfolio-img-wrap">
@@ -44,10 +52,7 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
 
         {/* ── FACE ARRIÈRE ─────────────────────────────────── */}
         <div className="flip-card-back">
-          <div className="card-corner-p-tl"></div>
-          <div className="card-corner-p-tr"></div>
-          <div className="card-corner-p-bl"></div>
-          <div className="card-corner-p-br"></div>
+          <Corners />
 
           <div className="back-hex">
             <IconHexagon />
