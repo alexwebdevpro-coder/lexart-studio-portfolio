@@ -30,12 +30,14 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
                 <span className="portfolio-tag" key={tag}>{tag}</span>
               ))}
             </div>
-            <button
-              className="portfolio-btn-flip"
-              onClick={() => setFlipped(true)}
-            >
-              VOIR LE PROJET <i className="bi bi-arrow-right ms-1"></i>
-            </button>
+            <div className="d-flex justify-content-center mt-2">
+              <button
+                className="portfolio-btn-flip"
+                onClick={() => setFlipped(true)}
+              >
+                VOIR LE PROJET <i className="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
           </div>
         </div>
 
