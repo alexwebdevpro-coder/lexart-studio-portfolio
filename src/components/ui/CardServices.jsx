@@ -1,3 +1,5 @@
+import '../../styles/CardServices.css'
+
 function CardServices({ label, hex, icon, title, desc }) {
   return (
     <div className="card service-card h-100 overflow-hidden position-relative">
