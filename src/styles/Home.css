@@ -94,7 +94,7 @@
 .home-btn-primary {
   padding: 12px 32px;
   background: var(--c-primary);
-  color: #0d0d0d;
+  color: var(--c-bg);
   font-size: 0.95rem;
   letter-spacing: 1px;
   cursor: pointer;

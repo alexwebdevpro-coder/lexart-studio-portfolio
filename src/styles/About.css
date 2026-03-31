@@ -132,7 +132,7 @@
 }
 
 .sys-bar span { opacity: 0.85; }
-.sys-bar strong { opacity: 1; color: #00d4ff; }
+.sys-bar strong { opacity: 1; color: var(--c-accent-cyan); }
 
 /* ---- Fade-in ---- */
 
@@ -226,11 +226,11 @@
 .tag:hover { background: rgba(var(--c-primary-rgb), 0.12); border-color: var(--c-primary); color: #fff; }
 
 .tag.cyan {
-  border-color: rgba(0, 212, 255, 0.35);
-  color: #00d4ff;
-  background: rgba(0, 212, 255, 0.04);
+  border-color: rgba(var(--c-accent-cyan-rgb), 0.35);
+  color: var(--c-accent-cyan);
+  background: rgba(var(--c-accent-cyan-rgb), 0.04);
 }
-.tag.cyan:hover { background: rgba(0, 212, 255, 0.1); border-color: #00d4ff; color: #fff; }
+.tag.cyan:hover { background: rgba(var(--c-accent-cyan-rgb), 0.1); border-color: var(--c-accent-cyan); color: #fff; }
 
 .tag.white {
   border-color: rgba(255, 255, 255, 0.15);
