@@ -1,0 +1,385 @@
+/* ============================================================
+   Politique de confidentialité — Cyberpunk Orange
+   Layout géré par Bootstrap dans Politique.jsx
+   Ce fichier : couleurs, typographie custom, styles spécifiques
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600&display=swap');
+
+/* ── Root panel ─────────────────────────────────────────── */
+.cp-root {
+  max-width: 820px;
+  background: #080808;
+  border: 1px solid #ff6a00;
+  padding: 2.5rem 2rem;
+  margin: 2rem auto;
+}
+
+/* ── Corner decorations ─────────────────────────────────── */
+.cp-corner {
+  width: 14px;
+  height: 14px;
+  border-color: #ff6a00;
+  border-style: solid;
+}
+.cp-corner.tl { top: 5px;    left: 5px;  border-width: 2px 0 0 2px; }
+.cp-corner.tr { top: 5px;    right: 5px; border-width: 2px 2px 0 0; }
+.cp-corner.bl { bottom: 5px; left: 5px;  border-width: 0 0 2px 2px; }
+.cp-corner.br { bottom: 5px; right: 5px; border-width: 0 2px 2px 0; }
+
+/* ── Scanlines overlay ──────────────────────────────────── */
+.cp-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 106, 0, 0.018) 2px,
+    rgba(255, 106, 0, 0.018) 3px
+  );
+  pointer-events: none;
+  z-index: 0;
+  animation: scanmove 8s linear infinite;
+}
+@keyframes scanmove {
+  from { background-position: 0 0; }
+  to   { background-position: 0 200px; }
+}
+
+/* ── Light sweep ────────────────────────────────────────── */
+.cp-sweep {
+  left: -100%;
+  width: 60%;
+  background: linear-gradient(90deg, transparent, rgba(255, 106, 0, 0.04), transparent);
+  animation: sweep 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes sweep {
+  0%   { left: -60%; }
+  100% { left: 160%; }
+}
+
+/* ── Content wrapper ────────────────────────────────────── */
+.cp-content { z-index: 1; }
+
+/* ── Logo box ───────────────────────────────────────────── */
+.cp-logo-box {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ff6a00;
+  animation: borderflicker 4s steps(1) infinite;
+}
+@keyframes borderflicker {
+  0%, 89%, 91%, 93%, 100% { border-color: #ff6a00; opacity: 1; }
+  90%, 92%                 { border-color: #ff3a00; opacity: 0.7; }
+}
+.cp-logo-box::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 7px;
+  height: 7px;
+  background: #ff6a00;
+  animation: dotpulse 2s ease-in-out infinite;
+}
+@keyframes dotpulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+.cp-logo-box svg { width: 16px; height: 16px; }
+
+.cp-logo-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #ff6a00;
+  letter-spacing: 2px;
+}
+.cp-logo-text span { color: #444; }
+
+/* ── Title ──────────────────────────────────────────────── */
+.cp-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 18px;
+  color: #ff6a00;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  animation: titleglitch 7s steps(1) infinite;
+}
+@keyframes titleglitch {
+  0%, 94%, 96%, 100% { transform: none; opacity: 1; }
+  95%                 { transform: translateX(3px) skewX(-5deg); opacity: 0.8; color: #ff3a00; }
+}
+
+.cp-subtitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #444;
+  letter-spacing: 2px;
+}
+
+/* ── Status bar ─────────────────────────────────────────── */
+.cp-statusbar {
+  padding: 6px 10px;
+  border: 1px solid #1a1a1a;
+  background: rgba(255, 106, 0, 0.03);
+}
+.cp-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ff6a00;
+  flex-shrink: 0;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.6); }
+}
+.cp-status-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 1px;
+}
+.cp-counter {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* ── Animated divider ───────────────────────────────────── */
+.cp-divider {
+  position: relative;
+  height: 1px;
+  background: #1a1a1a;
+  margin: 1.25rem 0;
+  overflow: visible;
+}
+.cp-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 30%;
+  background: #ff6a00;
+  animation: linescroll 3s ease-in-out infinite alternate;
+}
+@keyframes linescroll {
+  from { left: 0;   width: 20%; }
+  to   { left: 70%; width: 30%; }
+}
+
+/* ── Accordion items ────────────────────────────────────── */
+.cp-item {
+  margin-bottom: 4px;
+  border: 1px solid #141414;
+  transition: border-color 0.2s;
+}
+.cp-item:hover      { border-color: #2a2a2a; }
+.cp-item.open       { border-color: rgba(255, 106, 0, 0.5); }
+.cp-item.open:hover { border-color: rgba(255, 106, 0, 0.7); }
+
+/* ── Trigger button ─────────────────────────────────────── */
+.cp-trigger { cursor: pointer; }
+
+.cp-num-badge {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  padding: 0 10px;
+  height: 46px;
+  background: #141414;
+  color: #333;
+  letter-spacing: 1px;
+  min-width: 48px;
+  border-right: 1px solid #1e1e1e;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.cp-item.open .cp-num-badge {
+  background: #ff6a00;
+  color: #080808;
+  border-right-color: #ff6a00;
+}
+
+.cp-trigger-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  flex: 1;
+  padding: 14px 14px;
+  transition: color 0.2s;
+}
+.cp-item.open .cp-trigger-label,
+.cp-trigger:hover .cp-trigger-label { color: #ff6a00; }
+
+.cp-trigger-right { padding-right: 14px; }
+
+.cp-bar-group { gap: 2px; }
+.cp-bar {
+  width: 3px;
+  background: #1e1e1e;
+  transition: background 0.2s;
+}
+.cp-bar:nth-child(1) { height: 8px; }
+.cp-bar:nth-child(2) { height: 5px; }
+.cp-bar:nth-child(3) { height: 11px; }
+.cp-item.open .cp-bar,
+.cp-trigger:hover .cp-bar { background: #ff6a00; }
+
+.cp-arrow {
+  width: 14px;
+  height: 14px;
+  color: #333;
+  flex-shrink: 0;
+  transition: transform 0.25s, color 0.2s;
+}
+.cp-item.open .cp-arrow { transform: rotate(90deg); color: #ff6a00; }
+
+/* ── Accordion body ─────────────────────────────────────── */
+.cp-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cp-item.open .cp-body { max-height: 800px; }
+
+.cp-body-inner { padding: 0 14px 18px 62px; }
+
+.cp-body-line {
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed #1e1e1e;
+  margin-bottom: 14px;
+  position: relative;
+}
+.cp-item.open .cp-body-line::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: #ff6a00;
+  animation: linein 0.5s ease forwards 0.1s;
+}
+@keyframes linein { to { width: 40%; } }
+
+/* ── Body text & elements ───────────────────────────────── */
+.cp-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.75;
+  margin-bottom: 0.6rem;
+}
+.cp-text:last-child { margin-bottom: 0; }
+.cp-text strong { color: #ff6a00; font-weight: 500; }
+.cp-text a { color: #ff6a00; text-decoration: none; }
+.cp-text a:hover { text-decoration: underline; }
+
+.cp-tags { gap: 5px; }
+.cp-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  padding: 3px 9px;
+  border: 1px solid #ff6a00;
+  color: #ff6a00;
+  background: rgba(255, 106, 0, 0.06);
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+.cp-tag:hover { background: rgba(255, 106, 0, 0.14); }
+.cp-tag.dim {
+  border-color: #252525;
+  color: #444;
+  background: transparent;
+}
+
+.cp-contact {
+  gap: 12px;
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  padding: 10px 12px;
+  background: rgba(255, 106, 0, 0.04);
+  transition: background 0.2s, border-color 0.2s;
+}
+.cp-contact:hover {
+  background: rgba(255, 106, 0, 0.08);
+  border-color: rgba(255, 106, 0, 0.6);
+}
+.cp-contact-icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255, 106, 0, 0.4);
+}
+.cp-contact-icon svg { width: 13px; height: 13px; }
+.cp-contact-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: #444;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.cp-contact-value {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff6a00;
+}
+
+.cp-rights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 6px;
+  margin-top: 10px;
+}
+.cp-right {
+  border: 1px solid #141414;
+  padding: 8px 10px;
+  transition: border-color 0.2s;
+}
+.cp-right:hover { border-color: #ff6a00; }
+.cp-right::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px;
+  height: 100%;
+  background: #ff6a00;
+  opacity: 0.4;
+}
+.cp-right-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #ff6a00;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+.cp-right-desc {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.cp-footer { margin-top: 1.25rem; }
+.cp-footer span {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: #2a2a2a;
+  letter-spacing: 1px;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .cp-root { padding: 1.5rem 1rem; }
+  .cp-title { font-size: 14px; }
+  .cp-status-text { display: none; }
+  .cp-body-inner { padding-left: 14px; }
+  .cp-rights { grid-template-columns: repeat(2, 1fr); }
+}
