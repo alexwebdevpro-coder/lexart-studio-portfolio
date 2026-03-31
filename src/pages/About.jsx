@@ -11,7 +11,22 @@ function About() {
         <div className="row align-items-center g-5">
 
           <div className="col-12 col-lg-5 d-flex justify-content-center">
-            <img src={photo} alt="Alexis ZIRNHELT" className="about-photo" />
+            <div className="photo-panel">
+              <div className="photo-frame">
+                <span className="corner corner-tl"></span>
+                <span className="corner corner-tr"></span>
+                <span className="corner corner-bl"></span>
+                <span className="corner corner-br"></span>
+                <img src={photo} alt="Alexis ZIRNHELT" className="photo-img" />
+                <div className="photo-overlay"></div>
+                <div className="photo-hud">
+                  <span className="hud-tag">
+                    <span className="status-dot"></span>
+                    EN LIGNE
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="col-12 col-lg-7">
