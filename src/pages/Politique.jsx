@@ -31,7 +31,7 @@ function AccordionItem({ num, title, children, isOpen, onToggle }) {
       </button>
       <div className="cp-body">
         <div className="cp-body-inner">
-          <div className="cp-body-line"></div>
+          <div className="cp-body-line w-100 position-relative"></div>
           {children}
         </div>
       </div>
