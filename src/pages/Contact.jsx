@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Title from '../components/ui/Title'
-import { useParticles } from '../hooks/useParticles'
 import '../styles/Contact.css'
 
 const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID
@@ -11,12 +10,8 @@ const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 emailjs.init({ publicKey: PUBLIC_KEY })
 
 function Contact() {
-  const canvasRef = useRef(null)
-  const rootRef   = useRef(null)
   const formRef   = useRef(null)
   const [btnState, setBtnState] = useState('idle') // idle | sending | sent | error
-
-  useParticles(canvasRef, rootRef)
 
   function handleSend(e) {
     e.preventDefault()
@@ -49,8 +44,7 @@ function Contact() {
         subtitle="N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question."
       />
 
-      <section ref={rootRef} className="contact-section position-relative overflow-hidden pb-5">
-        <canvas ref={canvasRef} id="particles" className="position-absolute top-0 start-0 w-100 h-100"></canvas>
+      <section className="contact-section position-relative overflow-hidden pb-5">
         <div className="cy-scanlines position-absolute top-0 start-0 w-100 h-100"></div>
         <div className="cy-grid-lines position-absolute top-0 start-0 w-100 h-100"></div>
 
