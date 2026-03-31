@@ -6,22 +6,12 @@
 
 /* ── Canvas particles ───────────────────────────────────────── */
 #particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
   z-index: 0;
 }
 
 /* ── Scanlines ──────────────────────────────────────────────── */
 .cy-scanlines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: repeating-linear-gradient(
     0deg,
     transparent,
@@ -41,11 +31,6 @@
 
 /* ── Grid lines ─────────────────────────────────────────────── */
 .cy-grid-lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
   z-index: 0;
   background-image:
@@ -97,7 +82,6 @@
 
 /* ── Coins HUD ──────────────────────────────────────────────── */
 .cy-corner {
-  position: absolute;
   width: 16px;
   height: 16px;
   border-color: #FF6B00;
@@ -111,14 +95,11 @@
 
 /* ── Label ──────────────────────────────────────────────────── */
 .cy-label {
-  display: flex;
-  align-items: center;
   gap: 6px;
   font-family: 'Share Tech Mono', monospace;
   font-size: 0.65rem;
   color: #FF6B00;
   letter-spacing: 0.25em;
-  text-transform: uppercase;
   margin-bottom: 0.5rem;
   opacity: 0.85;
 }
