@@ -1,5 +1,11 @@
+import Title from '../components/ui/Title'
+
 function Services() {
-  return <div><h1>Services</h1></div>
+  return (
+    <div>
+      <Title text="SERVICES" />
+    </div>
+  )
 }
 
 export default Services

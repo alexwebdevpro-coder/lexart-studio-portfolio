@@ -1,5 +1,11 @@
+import Title from '../components/ui/Title'
+
 function Portfolio() {
-  return <div><h1>Portfolio</h1></div>
+  return (
+    <div>
+      <Title text="PORTFOLIO" />
+    </div>
+  )
 }
 
 export default Portfolio

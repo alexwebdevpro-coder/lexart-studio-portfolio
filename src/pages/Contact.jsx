@@ -1,5 +1,11 @@
+import Title from '../components/ui/Title'
+
 function Contact() {
-  return <div><h1>Contact</h1></div>
+  return (
+    <div>
+      <Title text="CONTACT" />
+    </div>
+  )
 }
 
 export default Contact

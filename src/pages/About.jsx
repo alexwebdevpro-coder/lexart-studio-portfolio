@@ -1,5 +1,11 @@
+import Title from '../components/ui/Title'
+
 function About() {
-  return <div><h1>About</h1></div>
+  return (
+    <div>
+      <Title text="À PROPOS" />
+    </div>
+  )
 }
 
 export default About
