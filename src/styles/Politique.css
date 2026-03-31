@@ -183,7 +183,10 @@
 .cp-item.open:hover { border-color: rgba(255, 106, 0, 0.7); }
 
 /* ── Trigger button ─────────────────────────────────────── */
-.cp-trigger { cursor: pointer; }
+.cp-trigger {
+  background: transparent;
+  cursor: pointer;
+}
 
 .cp-num-badge {
   font-family: 'Share Tech Mono', monospace;
