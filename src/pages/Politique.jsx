@@ -1,19 +1,11 @@
-import { useState } from 'react'
 import AccordionItem from '../components/ui/AccordionItem'
 import LegalPanel from '../components/ui/LegalPanel'
-import { useClock } from '../hooks/useClock'
+import { useLegalPage } from '../hooks/useLegalPage'
 
 const TOTAL = 7
 
 function Politique() {
-  const [openIndex, setOpenIndex] = useState(null)
-  const clock = useClock()
-
-  function toggle(i) {
-    setOpenIndex(prev => prev === i ? null : i)
-  }
-
-  const openCount = openIndex !== null ? 1 : 0
+  const { openIndex, toggle, openCount, clock } = useLegalPage()
 
   return (
     <LegalPanel
