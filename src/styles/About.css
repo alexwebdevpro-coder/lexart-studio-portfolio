@@ -6,10 +6,7 @@
 
 /* ---- Photo ---- */
 
-.photo-panel { position: relative; }
-
 .photo-frame {
-  position: relative;
   border: 1px solid #ff6400;
   padding: 4px;
   background: #0d0d15;
@@ -35,8 +32,6 @@
 .corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
 
 .photo-img {
-  width: 100%;
-  display: block;
   filter: contrast(1.1) brightness(0.9);
 }
 
@@ -75,7 +70,6 @@
   width: 8px; height: 8px;
   border-radius: 50%;
   background: #ff6400;
-  display: inline-block;
   margin-right: 6px;
   animation: pulse 1.5s ease-in-out infinite;
 }
@@ -89,12 +83,7 @@
 
 .stats-panel { margin-top: 24px; }
 
-.stat-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
+.stat-row { gap: 12px; margin-bottom: 14px; }
 
 .stat-label {
   font-family: 'Share Tech Mono', monospace;
@@ -109,7 +98,6 @@
   flex: 1;
   height: 4px;
   background: rgba(255, 255, 255, 0.06);
-  overflow: hidden;
 }
 
 .stat-bar-fill {
@@ -134,7 +122,6 @@
   font-size: 11px;
   color: #ff6400;
   width: 32px;
-  text-align: right;
 }
 
 /* ---- Sys bar ---- */
@@ -143,9 +130,7 @@
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
   color: rgba(0, 212, 255, 0.7);
-  display: flex;
   gap: 20px;
-  flex-wrap: wrap;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(255, 100, 0, 0.15);
 }
@@ -179,7 +164,6 @@
   font-size: 10px;
   color: #ff6400;
   letter-spacing: 3px;
-  text-transform: uppercase;
   margin-bottom: 10px;
   opacity: 0.8;
 }
@@ -202,14 +186,11 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
-  text-transform: uppercase;
   padding: 14px 28px;
   background: #ff6400;
   color: #0a0a0f;
   border: none;
   cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
   transition: all 0.2s;
   clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 }
@@ -222,18 +203,17 @@
 
 /* ---- Tags ---- */
 
-.tags-section { display: flex; flex-direction: column; gap: 12px; }
+.tags-section { gap: 12px; }
 
 .tags-category-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 9px;
   color: rgba(255, 100, 0, 0.45);
   letter-spacing: 2px;
-  text-transform: uppercase;
   margin-bottom: 6px;
 }
 
-.tags-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags-row { gap: 8px; }
 
 .tag {
   font-family: 'Share Tech Mono', monospace;
@@ -265,15 +245,10 @@
 
 /* ---- Timeline ---- */
 
-.timeline { display: flex; flex-direction: column; }
-
-.timeline-item { display: flex; gap: 16px; padding-bottom: 24px; }
+.timeline-item { gap: 16px; padding-bottom: 24px; }
 .timeline-item:last-child { padding-bottom: 0; }
 
 .timeline-line {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   flex-shrink: 0;
   width: 24px;
 }
@@ -309,7 +284,7 @@
 
 .timeline-title {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 4px;
@@ -317,7 +292,7 @@
 
 .timeline-desc {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   color: rgba(224, 224, 224, 0.55);
   line-height: 1.5;
   font-weight: 300;
