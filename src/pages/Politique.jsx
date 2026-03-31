@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../styles/Politique.css'
+import '../styles/AccordionItem.css'
 
 const TOTAL = 7
 
