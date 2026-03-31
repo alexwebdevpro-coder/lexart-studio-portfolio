@@ -137,6 +137,22 @@
   text-align: right;
 }
 
+/* ---- Sys bar ---- */
+
+.sys-bar {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: rgba(0, 212, 255, 0.7);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 100, 0, 0.15);
+}
+
+.sys-bar span { opacity: 0.6; }
+.sys-bar strong { opacity: 1; color: #00d4ff; }
+
 /* ---- Texte ---- */
 
 .about-title {

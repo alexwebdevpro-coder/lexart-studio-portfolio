@@ -57,6 +57,11 @@ function About() {
           </div>
 
           <div className="col-12 col-lg-7">
+            <div className="sys-bar mb-4">
+              <span>STATUT: <strong>RECONVERSION ACTIVE</strong></span>
+              <span>FORMATION: <strong>EN COURS</strong></span>
+              <span>OBJECTIF: <strong>FULLSTACK</strong></span>
+            </div>
             <h2 className="about-title mb-4">
               Mon parcours vers le développement web
             </h2>
