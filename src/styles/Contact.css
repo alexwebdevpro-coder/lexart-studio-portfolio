@@ -163,7 +163,7 @@ textarea.cy-input {
   position: relative;
   overflow: hidden;
   transition: color 0.3s;
-  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  clip-path: var(--clip-btn);
 }
 
 .cy-btn::before {
