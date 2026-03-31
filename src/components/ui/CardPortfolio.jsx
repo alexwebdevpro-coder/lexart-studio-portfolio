@@ -17,7 +17,7 @@ function CardPortfolio({ label, img, title, desc, tags, link, github }) {
           <div className="portfolio-card__glow"></div>
 
           <div className="portfolio-img-wrap">
-            <img src={img} alt={title} className="portfolio-img" />
+            <img src={img} alt={title} className="portfolio-img" loading="lazy" />
             <div className="portfolio-img-overlay"></div>
             <span className="portfolio-label text-uppercase">{label}</span>
           </div>

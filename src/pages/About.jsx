@@ -28,7 +28,7 @@ function About() {
                 <span className="corner corner-tr"></span>
                 <span className="corner corner-bl"></span>
                 <span className="corner corner-br"></span>
-                <img src={photo} alt="Alexis ZIRNHELT" className="photo-img w-100 d-block" />
+                <img src={photo} alt="Alexis ZIRNHELT" className="photo-img w-100 d-block" loading="lazy" />
                 <div className="photo-overlay"></div>
                 <div className="photo-hud">
                   <span className="hud-tag">
