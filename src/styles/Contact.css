@@ -106,13 +106,13 @@
 
 .cy-label-arrow {
   color: #FF6B00;
-  opacity: 0.5;
+  opacity: 0.75;
   font-size: 0.7rem;
 }
 
 .cy-label-opt {
   font-size: 0.55rem;
-  color: rgba(255, 107, 0, 0.4);
+  color: rgba(255, 107, 0, 0.65);
   letter-spacing: 0.15em;
   margin-left: 4px;
   text-transform: lowercase;
@@ -134,7 +134,7 @@
 }
 
 .cy-input::placeholder {
-  color: rgba(255, 107, 0, 0.3);
+  color: rgba(255, 107, 0, 0.5);
   font-family: 'Share Tech Mono', monospace;
 }
 
