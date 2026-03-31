@@ -31,7 +31,7 @@
 }
 
 .home-name span {
-  color: #ff6b00;
+  color: var(--c-primary);
 }
 
 .home-role-wrapper {
@@ -42,7 +42,7 @@
 .home-role {
   font-family: 'Share Tech Mono', sans-serif;
   font-size: 0.9rem;
-  color: #ff6b00;
+  color: var(--c-primary);
   letter-spacing: 3px;
   white-space: nowrap;
   width: calc(28ch + 90px);
@@ -57,7 +57,7 @@
 .home-role-cursor {
   font-family: 'Share Tech Mono', monospace;
   font-size: 0.9rem;
-  color: #ff6b00;
+  color: var(--c-primary);
   animation: blink 1s step-end infinite;
 }
 
@@ -86,14 +86,14 @@
 }
 
 .home-description span {
-  color: #ff6b00;
+  color: var(--c-primary);
 }
 
 /* ---- Boutons ---- */
 
 .home-btn-primary {
   padding: 12px 32px;
-  background: #ff6b00;
+  background: var(--c-primary);
   color: #0d0d0d;
   font-size: 0.95rem;
   letter-spacing: 1px;
@@ -112,13 +112,13 @@
 
 .home-btn-secondary {
   padding: 12px 32px;
-  color: #ff6b00;
+  color: var(--c-primary);
   font-size: 0.95rem;
   letter-spacing: 1px;
   cursor: pointer;
   border: none;
   clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-  outline: 1px solid rgba(255, 107, 0, 0.4);
+  outline: 1px solid rgba(var(--c-primary-rgb), 0.4);
   outline-offset: -1px;
   transition:
     background 0.2s ease,
@@ -127,15 +127,15 @@
 }
 
 .home-btn-secondary:hover {
-  background: rgba(255, 107, 0, 0.08);
-  outline-color: #ff6b00;
+  background: rgba(var(--c-primary-rgb), 0.08);
+  outline-color: var(--c-primary);
   transform: translateY(-2px);
 }
 
 /* Accessibilité — focus visible (clip-path supprime le focus ring natif) */
 .home-btn-primary:focus-visible,
 .home-btn-secondary:focus-visible {
-  outline: 2px solid #ff6b00;
+  outline: 2px solid var(--c-primary);
   outline-offset: 4px;
 }
 
@@ -152,7 +152,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 2px dashed rgba(255, 107, 0, 0.4);
+  border: 2px dashed rgba(var(--c-primary-rgb), 0.4);
   animation: spin 20s linear infinite;
 }
 
@@ -169,8 +169,8 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
-  border: 2px solid #ff6b00;
+  border: 2px solid var(--c-primary);
   box-shadow:
-    0 0 24px rgba(255, 107, 0, 0.5),
-    0 0 60px rgba(255, 107, 0, 0.15);
+    0 0 24px rgba(var(--c-primary-rgb), 0.5),
+    0 0 60px rgba(var(--c-primary-rgb), 0.15);
 }
