@@ -10,6 +10,9 @@
   --c-accent-cyan-rgb: 0, 212, 255;
   --c-bg:            #0d0d0d;
   --c-text:          #f0f0f0;
+  --ff-mono:  'Share Tech Mono', monospace;
+  --ff-tech:  'Orbitron', monospace;
+  --ff-body:  'Rajdhani', sans-serif;
 }
 
 /* ── Coins décoratifs partagés ───────────────────────────── */

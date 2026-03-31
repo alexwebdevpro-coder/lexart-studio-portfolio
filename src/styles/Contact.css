@@ -92,7 +92,7 @@
 /* ── Label ──────────────────────────────────────────────────── */
 .cy-label {
   gap: 6px;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 0.65rem;
   color: var(--c-primary);
   letter-spacing: 0.25em;
@@ -120,7 +120,7 @@
   border: 1px solid rgba(var(--c-primary-rgb), 0.25);
   border-left: 2px solid rgba(var(--c-primary-rgb), 0.5);
   color: #e8e0d0;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 0.9rem;
   padding: 0.7rem 0.9rem;
   border-radius: 2px;
@@ -131,7 +131,7 @@
 
 .cy-input::placeholder {
   color: rgba(var(--c-primary-rgb), 0.5);
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
 }
 
 .cy-input:focus {
@@ -150,7 +150,7 @@ textarea.cy-input {
 
 /* ── Bouton ─────────────────────────────────────────────────── */
 .cy-btn {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.2em;

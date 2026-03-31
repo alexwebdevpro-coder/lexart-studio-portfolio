@@ -40,7 +40,7 @@
 .service-card__hex {
   bottom: 8px;
   right: 10px;
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 9px;
   color: rgba(var(--c-primary-rgb), 0.25);
   letter-spacing: 1px;
@@ -50,7 +50,7 @@
 
 /* ── Label code service ─────────────────────────────────────── */
 .service-label {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -71,7 +71,7 @@
 
 /* ── Titre ──────────────────────────────────────────────────── */
 .service-title {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--c-primary);
@@ -86,7 +86,7 @@
 
 /* ── Description ────────────────────────────────────────────── */
 .service-desc {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--ff-body);
   font-size: 0.9rem;
   font-weight: 300;
   color: rgba(210, 190, 165, 0.9);

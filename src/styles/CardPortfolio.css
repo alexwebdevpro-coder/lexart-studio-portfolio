@@ -130,7 +130,7 @@
   position: absolute;
   top: 10px;
   left: 12px;
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -143,7 +143,7 @@
 
 /* ── Titre (front) ──────────────────────────────────────────── */
 .portfolio-title {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--c-primary);
@@ -160,7 +160,7 @@
 
 /* ── Description (front) ────────────────────────────────────── */
 .portfolio-desc {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--ff-body);
   font-size: 0.9rem;
   font-weight: 300;
   color: rgba(210, 190, 165, 0.9);
@@ -170,7 +170,7 @@
 
 /* ── Tags (front) ───────────────────────────────────────────── */
 .portfolio-tag {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 10px;
   padding: 3px 10px;
   border: 1px solid rgba(var(--c-primary-rgb), 0.35);
@@ -181,7 +181,7 @@
 
 /* ── Bouton FLIP (front) ────────────────────────────────────── */
 .portfolio-btn-flip {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -216,7 +216,7 @@
 
 /* ── BACK — contenu ─────────────────────────────────────────── */
 .back-label {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 8px;
   letter-spacing: 4px;
   color: rgba(var(--c-primary-rgb), 0.75);
@@ -227,7 +227,7 @@
 }
 
 .back-title {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--c-primary);
@@ -260,7 +260,7 @@
 }
 
 .back-btn {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -315,7 +315,7 @@
 /* ── Bouton retour (back) ───────────────────────────────────── */
 .back-return {
   margin-top: 1.5rem;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 10px;
   letter-spacing: 2px;
   color: rgba(var(--c-primary-rgb), 0.65);

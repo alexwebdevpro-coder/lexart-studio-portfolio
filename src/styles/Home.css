@@ -40,7 +40,7 @@
 }
 
 .home-role {
-  font-family: 'Share Tech Mono', sans-serif;
+  font-family: var(--ff-mono);
   font-size: 0.9rem;
   color: var(--c-primary);
   letter-spacing: 3px;
@@ -55,7 +55,7 @@
 }
 
 .home-role-cursor {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 0.9rem;
   color: var(--c-primary);
   animation: blink 1s step-end infinite;

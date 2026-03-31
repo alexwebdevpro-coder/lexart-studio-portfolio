@@ -70,7 +70,7 @@
 .cp-logo-box svg { width: 16px; height: 16px; }
 
 .cp-logo-text {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 12px;
   color: var(--c-primary);
   letter-spacing: 2px;
@@ -79,7 +79,7 @@
 
 /* ── Title ──────────────────────────────────────────────── */
 .cp-title {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 18px;
   color: var(--c-primary);
   letter-spacing: 2px;
@@ -92,7 +92,7 @@
 }
 
 .cp-subtitle {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 10px;
   color: #777;
   letter-spacing: 2px;
@@ -113,13 +113,13 @@
   animation: pulse 1.4s ease-in-out infinite;
 }
 .cp-status-text {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 10px;
   color: #888;
   letter-spacing: 1px;
 }
 .cp-counter {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 10px;
   color: #666;
   letter-spacing: 1px;
@@ -151,7 +151,7 @@
 /* ── Footer ─────────────────────────────────────────────── */
 .cp-footer { margin-top: 1.25rem; }
 .cp-footer span {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 9px;
   color: #555;
   letter-spacing: 1px;
