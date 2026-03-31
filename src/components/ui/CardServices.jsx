@@ -1,6 +1,8 @@
 import '../../styles/CardServices.css'
 
-function CardServices({ label, hex, icon, title, desc }) {
+function CardServices({ label, icon, title, desc }) {
+  const num = parseInt(label.replace('SVC-', ''), 10) - 1
+  const hex = `0xFF${(0x6400 + num).toString(16).toUpperCase()}`
   return (
     <div className="card service-card h-100 overflow-hidden position-relative">
       <div className="card-corner-tr position-absolute"></div>
