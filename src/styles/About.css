@@ -1,0 +1,35 @@
+/* ============================================================
+   About — Lexart Studio
+   Layout géré par Bootstrap dans About.jsx
+   Ce fichier : couleurs, typographie custom, styles spécifiques
+   ============================================================ */
+
+/* ---- Photo ---- */
+
+.about-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  box-shadow: 0 0 40px rgba(255, 107, 0, 0.1);
+}
+
+/* ---- Texte ---- */
+
+.about-title {
+  font-size: 1.5rem;
+  color: #F0F0F0;
+  line-height: 1.3;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  color: #888;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
