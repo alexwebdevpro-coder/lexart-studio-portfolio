@@ -10,9 +10,9 @@ function Services() {
 
       <section className="services container pb-5">
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {services.map(({ label, hex, icon, title, desc }) => (
+          {services.map(({ label, icon, title, desc }) => (
             <div className="col" key={title}>
-              <CardServices label={label} hex={hex} icon={icon} title={title} desc={desc} />
+              <CardServices label={label} icon={icon} title={title} desc={desc} />
             </div>
           ))}
         </div>

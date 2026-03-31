@@ -10,8 +10,8 @@
   inset: 0;
   background: repeating-linear-gradient(
     180deg,
-    rgba(255, 100, 0, 0.012) 0px,
-    rgba(255, 100, 0, 0.012) 1px,
+    rgba(var(--c-primary-rgb), 0.012) 0px,
+    rgba(var(--c-primary-rgb), 0.012) 1px,
     transparent 1px,
     transparent 3px
   );

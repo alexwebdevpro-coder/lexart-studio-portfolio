@@ -34,23 +34,23 @@
 /* ── FACE AVANT ─────────────────────────────────────────────── */
 .flip-card-front {
   background: rgba(10, 8, 4, 0.92);
-  border: 1px solid rgba(255, 100, 0, 0.35);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.35);
   cursor: pointer;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .flip-card-front:hover {
-  border-color: #ff6400;
+  border-color: var(--c-primary);
   box-shadow:
-    0 0 18px rgba(255, 100, 0, 0.4),
-    0 0 40px rgba(255, 100, 0, 0.15),
-    inset 0 0 30px rgba(255, 100, 0, 0.05);
+    0 0 18px rgba(var(--c-primary-rgb), 0.4),
+    0 0 40px rgba(var(--c-primary-rgb), 0.15),
+    inset 0 0 30px rgba(var(--c-primary-rgb), 0.05);
 }
 
 /* ── FACE ARRIÈRE ───────────────────────────────────────────── */
 .flip-card-back {
   background: rgba(6, 4, 2, 0.97);
-  border: 1px solid rgba(255, 100, 0, 0.5);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.5);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -58,8 +58,8 @@
   align-items: center;
   padding: 2rem;
   box-shadow:
-    inset 0 0 60px rgba(255, 100, 0, 0.07),
-    0 0 30px rgba(255, 100, 0, 0.2);
+    inset 0 0 60px rgba(var(--c-primary-rgb), 0.07),
+    0 0 30px rgba(var(--c-primary-rgb), 0.2);
 }
 
 /* ── Scan line effect (back) ────────────────────────────────── */
@@ -71,40 +71,16 @@
     0deg,
     transparent,
     transparent 2px,
-    rgba(255, 100, 0, 0.015) 2px,
-    rgba(255, 100, 0, 0.015) 4px
+    rgba(var(--c-primary-rgb), 0.015) 2px,
+    rgba(var(--c-primary-rgb), 0.015) 4px
   );
   pointer-events: none;
   z-index: 0;
 }
 
 /* ── Coins décoratifs ───────────────────────────────────────── */
-.card-corner-p-tl,
-.card-corner-p-tr,
-.card-corner-p-bl,
-.card-corner-p-br {
-  width: 14px;
-  height: 14px;
-  border-color: #ff6400;
-  border-style: solid;
-  transition: width 0.3s ease, height 0.3s ease;
-  z-index: 5;
-  position: absolute;
-}
-
-.card-corner-p-tl { top: 6px; left: 6px;     border-width: 2px 0 0 2px; }
-.card-corner-p-tr { top: 6px; right: 6px;    border-width: 2px 2px 0 0; }
-.card-corner-p-bl { bottom: 6px; left: 6px;  border-width: 0 0 2px 2px; }
-.card-corner-p-br { bottom: 6px; right: 6px; border-width: 0 2px 2px 0; }
-
-.flip-card-front:hover .card-corner-p-tl,
-.flip-card-front:hover .card-corner-p-tr,
-.flip-card-front:hover .card-corner-p-bl,
-.flip-card-front:hover .card-corner-p-br,
-.flip-card-back .card-corner-p-tl,
-.flip-card-back .card-corner-p-tr,
-.flip-card-back .card-corner-p-bl,
-.flip-card-back .card-corner-p-br {
+.flip-card-front:hover .cyber-corner,
+.flip-card-back .cyber-corner {
   width: 20px;
   height: 20px;
 }
@@ -113,7 +89,7 @@
 .portfolio-card__glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(255, 100, 0, 0.1) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(var(--c-primary-rgb), 0.1) 0%, transparent 65%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -154,37 +130,37 @@
   position: absolute;
   top: 10px;
   left: 12px;
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: rgba(255, 100, 0, 0.8);
+  color: rgba(var(--c-primary-rgb), 0.8);
   background: rgba(10, 8, 4, 0.75);
   padding: 3px 8px;
-  border: 1px solid rgba(255, 100, 0, 0.3);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.3);
   z-index: 2;
 }
 
 /* ── Titre (front) ──────────────────────────────────────────── */
 .portfolio-title {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 0.95rem;
   font-weight: 700;
-  color: #ff6400;
+  color: var(--c-primary);
   letter-spacing: 1.5px;
   line-height: 1.2;
-  filter: drop-shadow(0 0 6px rgba(255, 100, 0, 0.4));
+  filter: drop-shadow(0 0 6px rgba(var(--c-primary-rgb), 0.4));
   transition: filter 0.3s ease;
   margin-bottom: 0;
 }
 
 .flip-card-front:hover .portfolio-title {
-  filter: drop-shadow(0 0 10px rgba(255, 100, 0, 0.8));
+  filter: drop-shadow(0 0 10px rgba(var(--c-primary-rgb), 0.8));
 }
 
 /* ── Description (front) ────────────────────────────────────── */
 .portfolio-desc {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: var(--ff-body);
   font-size: 0.9rem;
   font-weight: 300;
   color: rgba(210, 190, 165, 0.9);
@@ -194,24 +170,24 @@
 
 /* ── Tags (front) ───────────────────────────────────────────── */
 .portfolio-tag {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 10px;
   padding: 3px 10px;
-  border: 1px solid rgba(255, 100, 0, 0.35);
-  color: rgba(255, 100, 0, 0.9);
-  background: rgba(255, 100, 0, 0.04);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.35);
+  color: rgba(var(--c-primary-rgb), 0.9);
+  background: rgba(var(--c-primary-rgb), 0.04);
   letter-spacing: 1px;
 }
 
 /* ── Bouton FLIP (front) ────────────────────────────────────── */
 .portfolio-btn-flip {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #ff6400;
+  color: var(--c-primary);
   background: transparent;
-  border: 1px solid rgba(255, 100, 0, 0.4);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.4);
   padding: 6px 16px;
   cursor: pointer;
   text-transform: uppercase;
@@ -226,24 +202,24 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 100, 0, 0.08);
+  background: rgba(var(--c-primary-rgb), 0.08);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
 
 .portfolio-btn-flip:hover::before { transform: translateX(0); }
 .portfolio-btn-flip:hover {
-  color: #ffaa00;
-  border-color: #ffaa00;
-  box-shadow: 0 0 12px rgba(255, 100, 0, 0.3);
+  color: var(--c-primary-light);
+  border-color: var(--c-primary-light);
+  box-shadow: 0 0 12px rgba(var(--c-primary-rgb), 0.3);
 }
 
 /* ── BACK — contenu ─────────────────────────────────────────── */
 .back-label {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 8px;
   letter-spacing: 4px;
-  color: rgba(255, 100, 0, 0.75);
+  color: rgba(var(--c-primary-rgb), 0.75);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   position: relative;
@@ -251,13 +227,13 @@
 }
 
 .back-title {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ff6400;
+  color: var(--c-primary);
   letter-spacing: 2px;
   text-align: center;
-  filter: drop-shadow(0 0 12px rgba(255, 100, 0, 0.6));
+  filter: drop-shadow(0 0 12px rgba(var(--c-primary-rgb), 0.6));
   margin-bottom: 1.5rem;
   position: relative;
   z-index: 1;
@@ -266,7 +242,7 @@
 .back-separator {
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #ff6400, transparent);
+  background: var(--grad-line-h);
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;
@@ -284,7 +260,7 @@
 }
 
 .back-btn {
-  font-family: 'Orbitron', monospace;
+  font-family: var(--ff-tech);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -295,9 +271,9 @@
   justify-content: center;
   gap: 10px;
   padding: 12px 20px;
-  border: 1px solid rgba(255, 100, 0, 0.5);
-  color: #ff6400;
-  background: rgba(255, 100, 0, 0.05);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.5);
+  color: var(--c-primary);
+  background: rgba(var(--c-primary-rgb), 0.05);
   cursor: pointer;
   transition: all 0.25s ease;
   position: relative;
@@ -308,7 +284,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 100, 0, 0.1);
+  background: rgba(var(--c-primary-rgb), 0.1);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
@@ -318,12 +294,12 @@
 .back-btn:hover {
   color: #ffcc00;
   border-color: #ffcc00;
-  box-shadow: 0 0 16px rgba(255, 100, 0, 0.35);
+  box-shadow: 0 0 16px rgba(var(--c-primary-rgb), 0.35);
   text-decoration: none;
 }
 
 .back-btn--github {
-  border-color: rgba(255, 100, 0, 0.3);
+  border-color: rgba(var(--c-primary-rgb), 0.3);
 }
 
 .back-btn--disabled {
@@ -339,10 +315,10 @@
 /* ── Bouton retour (back) ───────────────────────────────────── */
 .back-return {
   margin-top: 1.5rem;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--ff-mono);
   font-size: 10px;
   letter-spacing: 2px;
-  color: rgba(255, 100, 0, 0.65);
+  color: rgba(var(--c-primary-rgb), 0.65);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -352,14 +328,14 @@
   z-index: 1;
 }
 
-.back-return:hover { color: rgba(255, 100, 0, 0.8); }
+.back-return:hover { color: rgba(var(--c-primary-rgb), 0.8); }
 
 /* ── Icône déco back ────────────────────────────────────────── */
 .back-hex {
   font-size: 3rem;
-  color: rgba(255, 100, 0, 0.12);
+  color: rgba(var(--c-primary-rgb), 0.12);
   margin-bottom: 1rem;
-  filter: drop-shadow(0 0 20px rgba(255, 100, 0, 0.2));
+  filter: drop-shadow(0 0 20px rgba(var(--c-primary-rgb), 0.2));
   position: relative;
   z-index: 1;
   line-height: 1;

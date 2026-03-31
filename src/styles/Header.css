@@ -3,7 +3,7 @@
 .nav-link {
   font-family: 'Michroma', sans-serif;
   color: #F0F0F0 !important;
-  border: 1px solid rgba(255, 107, 0, 0.12);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.12);
   border-radius: 20px;
   padding: 6px 14px !important;
   transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
@@ -11,14 +11,14 @@
 
 .nav-link:hover {
   color: #FFB347 !important;
-  border-color: rgba(255, 107, 0, 0.35);
-  background-color: rgba(255, 107, 0, 0.06);
+  border-color: rgba(var(--c-primary-rgb), 0.35);
+  background-color: rgba(var(--c-primary-rgb), 0.06);
 }
 
 .nav-link.active {
-  color: #FF6B00 !important;
-  border-color: rgba(255, 107, 0, 0.55);
-  background-color: rgba(255, 107, 0, 0.12);
+  color: var(--c-primary) !important;
+  border-color: rgba(var(--c-primary-rgb), 0.55);
+  background-color: rgba(var(--c-primary-rgb), 0.12);
 }
 
 .nav-link.nav-cta {
