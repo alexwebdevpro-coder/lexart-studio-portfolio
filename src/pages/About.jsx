@@ -12,11 +12,11 @@ const stats = [
 ];
 
 function About() {
-  const [animate, setAnimate] = useState(false)
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setAnimate(true), 50)
-    return () => clearTimeout(t)
+    const t = setTimeout(() => setAnimate(true), 50);
+    return () => clearTimeout(t);
   }, []);
 
   return (
@@ -48,7 +48,10 @@ function About() {
                 <div className="stat-row" key={label}>
                   <div className="stat-label">{label}</div>
                   <div className="stat-bar-bg">
-                    <div className="stat-bar-fill" style={{ width: animate ? `${val}%` : '0%' }}></div>
+                    <div
+                      className="stat-bar-fill"
+                      style={{ width: animate ? `${val}%` : "0%" }}
+                    ></div>
                   </div>
                   <div className="stat-val">{val}%</div>
                 </div>
@@ -58,32 +61,116 @@ function About() {
 
           <div className="col-12 col-lg-7">
             <div className="sys-bar mb-4">
-              <span>STATUT: <strong>RECONVERSION ACTIVE</strong></span>
-              <span>FORMATION: <strong>EN COURS</strong></span>
-              <span>OBJECTIF: <strong>FULLSTACK</strong></span>
+              <span>
+                STATUT: <strong>RECONVERSION ACTIVE</strong>
+              </span>
+              <span>
+                FORMATION: <strong>EN COURS</strong>
+              </span>
+              <span>
+                OBJECTIF: <strong>FULLSTACK</strong>
+              </span>
             </div>
-            <h2 className="about-title mb-4">
-              Mon parcours vers le développement web
-            </h2>
-            <p className="about-text">
-              Actuellement en reconversion professionnelle dans le développement
-              web, je suis une formation au Centre de Formation Européen afin de
-              devenir développeur web fullstack. À travers cette formation et
-              mes projets personnels, je développe mes compétences en création
-              d'applications web modernes et fonctionnelles.
-            </p>
-            <p className="about-text">
-              Avant cette transition, j'ai travaillé dans l'enseignement du
-              cirque, un domaine qui m'a permis de développer des qualités
-              essentielles comme la pédagogie, la créativité, la rigueur et la
-              capacité d'adaptation.
-            </p>
-            <p className="about-text">
-              Aujourd'hui, je mets ces compétences au service de ma nouvelle
-              carrière dans le développement web, avec l'envie de continuer à
-              apprendre, relever de nouveaux défis et participer à la création
-              de projets numériques.
-            </p>
+            <div
+              className={`text-block fade-in mb-5${animate ? " visible" : ""}`}
+              style={{ transitionDelay: "0.3s" }}
+            >
+              <div className="text-block-label">// MISSION PRINCIPALE</div>
+              <p>
+                Actuellement en formation au{" "}
+                <strong>Centre de Formation Européen</strong>, je construis pas
+                à pas ma nouvelle identité de{" "}
+                <strong>développeur web fullstack</strong>. Chaque ligne de code
+                est un module de plus dans ma progression — méthodique,
+                déterminée.
+              </p>
+            </div>
+
+            <div
+              className={`fade-in${animate ? " visible" : ""}`}
+              style={{ transitionDelay: "0.4s" }}
+            >
+              <div className="text-block-label">// HISTORIQUE DU SYSTÈME</div>
+              <div className="timeline">
+                <div className="timeline-item">
+                  <div className="timeline-line">
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-connector"></div>
+                  </div>
+                  <div className="timeline-content">
+                    <div className="timeline-year">AVANT 2024</div>
+                    <div className="timeline-title">Enseignement du Cirque</div>
+                    <div className="timeline-desc">
+                      Pédagogie • Créativité • Rigueur • Gestion du risque — des
+                      compétences transversales qui façonnent encore ma vision
+                      du code.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-line">
+                    <div className="timeline-dot active"></div>
+                  </div>
+                  <div className="timeline-content">
+                    <div className="timeline-year">2025 → NOW</div>
+                    <div className="timeline-title">
+                      Développeur Web en Formation
+                    </div>
+                    <div className="timeline-desc">
+                      Création d'applications modernes et fonctionnelles.
+                      Relever de nouveaux défis numériques chaque jour.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={`fade-in mt-5${animate ? " visible" : ""}`} style={{ transitionDelay: "0.5s" }}>
+              <div className="text-block-label">// MODULES ACTIFS</div>
+              <div className="tags-section">
+
+                <div>
+                  <div className="tags-category-label">Frontend</div>
+                  <div className="tags-row">
+                    <span className="tag">HTML</span>
+                    <span className="tag">CSS</span>
+                    <span className="tag">JavaScript</span>
+                    <span className="tag">React</span>
+                    <span className="tag">Vue.js</span>
+                    <span className="tag">Angular</span>
+                    <span className="tag">Bootstrap</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="tags-category-label">Backend</div>
+                  <div className="tags-row">
+                    <span className="tag cyan">Node.js</span>
+                    <span className="tag cyan">PHP</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="tags-category-label">Base de données</div>
+                  <div className="tags-row">
+                    <span className="tag cyan">MySQL</span>
+                    <span className="tag cyan">MongoDB</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="tags-category-label">Outils</div>
+                  <div className="tags-row">
+                    <span className="tag white">Git</span>
+                    <span className="tag white">GitHub</span>
+                    <span className="tag white">VS Code</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
