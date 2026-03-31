@@ -13,7 +13,8 @@
   --ff-mono:  'Share Tech Mono', monospace;
   --ff-tech:  'Orbitron', monospace;
   --ff-body:  'Rajdhani', sans-serif;
-  --clip-btn: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  --clip-btn:    polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  --grad-line-h: linear-gradient(90deg, transparent, var(--c-primary), transparent);
 }
 
 /* ── Coins décoratifs partagés ───────────────────────────── */

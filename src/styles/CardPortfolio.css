@@ -242,7 +242,7 @@
 .back-separator {
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--c-primary), transparent);
+  background: var(--grad-line-h);
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;
