@@ -1,0 +1,150 @@
+/* ============================================================
+   CardPortfolio — Cyberpunk Orange
+   Styles spécifiques au composant CardPortfolio
+   ============================================================ */
+
+/* ── Card principale ────────────────────────────────────────── */
+.portfolio-card {
+  background: rgba(10, 8, 4, 0.85);
+  border: 1px solid rgba(255, 100, 0, 0.35);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ── Coins décoratifs ───────────────────────────────────────── */
+.card-corner-p-tl,
+.card-corner-p-tr,
+.card-corner-p-bl,
+.card-corner-p-br {
+  width: 14px;
+  height: 14px;
+  border-color: #ff6400;
+  border-style: solid;
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: 5;
+}
+
+.card-corner-p-tl { top: 6px; left: 6px;     border-width: 2px 0 0 2px; }
+.card-corner-p-tr { top: 6px; right: 6px;    border-width: 2px 2px 0 0; }
+.card-corner-p-bl { bottom: 6px; left: 6px;  border-width: 0 0 2px 2px; }
+.card-corner-p-br { bottom: 6px; right: 6px; border-width: 0 2px 2px 0; }
+
+/* ── Glow radial ────────────────────────────────────────────── */
+.portfolio-card__glow {
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 100, 0, 0.1) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Image ──────────────────────────────────────────────────── */
+.portfolio-img {
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  filter: contrast(1.05) brightness(0.85);
+}
+
+.portfolio-img-overlay {
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 8, 4, 0.9) 100%);
+  z-index: 1;
+}
+
+/* ── Label ──────────────────────────────────────────────────── */
+.portfolio-label {
+  top: 10px;
+  left: 12px;
+  font-family: 'Orbitron', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255, 100, 0, 0.8);
+  background: rgba(10, 8, 4, 0.75);
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 100, 0, 0.3);
+  z-index: 2;
+}
+
+/* ── Titre ──────────────────────────────────────────────────── */
+.portfolio-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ff6400;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  filter: drop-shadow(0 0 6px rgba(255, 100, 0, 0.4));
+  transition: filter 0.3s ease;
+}
+
+/* ── Description ────────────────────────────────────────────── */
+.portfolio-desc {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(210, 190, 165, 0.65);
+  line-height: 1.6;
+}
+
+/* ── Tags ───────────────────────────────────────────────────── */
+.portfolio-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  padding: 3px 10px;
+  border: 1px solid rgba(255, 100, 0, 0.35);
+  color: rgba(255, 100, 0, 0.7);
+  background: rgba(255, 100, 0, 0.04);
+  letter-spacing: 1px;
+}
+
+/* ── Bouton lien ────────────────────────────────────────────── */
+.portfolio-btn {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ff6400;
+  border-bottom: 1px solid rgba(255, 100, 0, 0.3);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.portfolio-btn:hover {
+  color: #ffaa00;
+  border-color: #ffaa00;
+}
+
+/* ── Hover card ─────────────────────────────────────────────── */
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff6400;
+  box-shadow:
+    0 0 18px rgba(255, 100, 0, 0.4),
+    0 0 40px rgba(255, 100, 0, 0.15),
+    inset 0 0 30px rgba(255, 100, 0, 0.05);
+}
+
+.portfolio-card:hover .card-corner-p-tl,
+.portfolio-card:hover .card-corner-p-tr,
+.portfolio-card:hover .card-corner-p-bl,
+.portfolio-card:hover .card-corner-p-br {
+  width: 20px;
+  height: 20px;
+}
+
+.portfolio-card:hover .portfolio-card__glow { opacity: 1; }
+
+.portfolio-card:hover .portfolio-img {
+  transform: scale(1.04);
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.portfolio-card:hover .portfolio-title {
+  filter: drop-shadow(0 0 10px rgba(255, 100, 0, 0.8));
+}
