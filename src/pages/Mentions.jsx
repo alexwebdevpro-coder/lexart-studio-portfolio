@@ -1,5 +1,11 @@
+import Title from '../components/ui/Title'
+
 function Mentions() {
-  return <div><h1>Mentions</h1></div>
+  return (
+    <div>
+      <Title text="MENTIONS LÉGALES" />
+    </div>
+  )
 }
 
 export default Mentions

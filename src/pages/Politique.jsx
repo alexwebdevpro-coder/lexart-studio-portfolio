@@ -1,5 +1,11 @@
+import Title from '../components/ui/Title'
+
 function Politique() {
-  return <div><h1>Politique</h1></div>
+  return (
+    <div>
+      <Title text="POLITIQUE DE CONFIDENTIALITÉ" />
+    </div>
+  )
 }
 
 export default Politique
