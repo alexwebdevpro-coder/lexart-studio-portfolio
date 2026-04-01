@@ -1,16 +1,78 @@
-# React + Vite
+# Lexart Studio — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Aperçu du site](src/assets/image/Capture-ecran-site.webp)
 
-Currently, two official plugins are available:
+Portfolio personnel d'Alexis Zirnhelt, développeur web fullstack en formation à Nancy.  
+Design cyberpunk orange, animations canvas, formulaire de contact intégré.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Catégorie | Outils |
+|-----------|--------|
+| Framework | React 19 + React Router DOM 7 |
+| Build | Vite 8 |
+| CSS | Bootstrap 5 + CSS custom (variables, animations) |
+| Contact | EmailJS |
+| Optimisation | PurgeCSS, lazy routes, images WebP |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Accueil — photo, présentation, CTA |
+| `/about` | À propos — stats, timeline, compétences |
+| `/services` | Services proposés (6 cartes) |
+| `/portfolio` | Projets réalisés (flip cards) |
+| `/contact` | Formulaire de contact via EmailJS |
+| `/mentions-legales` | Mentions légales |
+| `/politique-de-confidentialite` | Politique de confidentialité |
+
+---
+
+## Installation
+
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+```bash
+npm run dev      # Serveur de développement (réseau exposé)
+npm run build    # Build de production
+npm run preview  # Prévisualisation du build
+npm run lint     # Analyse ESLint
+```
+
+---
+
+## Structure
+
+```
+src/
+├── pages/          # 7 pages (lazy-loadées)
+├── components/
+│   ├── layout/     # Header, Footer
+│   └── ui/         # CardPortfolio, CardServices, LegalPanel...
+├── hooks/          # useParticles, useClock, useLegalPage
+├── data/           # portfolio.js, services.js, about.js
+├── styles/         # CSS par composant + variables.css
+└── assets/         # Images WebP, SVG
+```
+
+---
+
+## Fonctionnalités
+
+- Animations canvas (particules connectées)
+- Cartes portfolio avec effet flip 3D
+- Formulaire de contact avec gestion des états (envoi / erreur)
+- Accordéon pour les pages légales
+- Design responsive mobile-first
+- Réduction des animations (`prefers-reduced-motion`)
+- Error boundary React
