@@ -1,0 +1,139 @@
+/* ============================================================
+   CardServices — Cyberpunk Orange Fire
+   Styles spécifiques au composant CardServices
+   ============================================================ */
+
+/* ── Card principale ────────────────────────────────────────── */
+.service-card {
+  background: rgba(10, 8, 4, 0.85);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.35);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* ── Glow radial ────────────────────────────────────────────── */
+.service-card__glow {
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(var(--c-primary-rgb), 0.12) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Scan streak ────────────────────────────────────────────── */
+.service-card__streak {
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(var(--c-primary-rgb), 0.7), transparent);
+  top: -2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: top 0.55s ease-in-out, opacity 0.1s ease;
+  z-index: 1;
+}
+
+/* ── Code hexadécimal décoratif ─────────────────────────────── */
+.service-card__hex {
+  bottom: 8px;
+  right: 10px;
+  font-family: var(--ff-tech);
+  font-size: 9px;
+  color: rgba(var(--c-primary-rgb), 0.25);
+  letter-spacing: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Label code service ─────────────────────────────────────── */
+.service-label {
+  font-family: var(--ff-tech);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(var(--c-primary-rgb), 0.75);
+  margin-bottom: 4px;
+}
+
+/* ── Icône ──────────────────────────────────────────────────── */
+.service-icon {
+  font-size: 2.2rem;
+  color: var(--c-primary);
+  filter: drop-shadow(0 0 10px rgba(var(--c-primary-rgb), 0.7));
+  margin-bottom: 0.8rem;
+  transition: filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Titre ──────────────────────────────────────────────────── */
+.service-title {
+  font-family: var(--ff-tech);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--c-primary);
+  letter-spacing: 1.5px;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  filter: drop-shadow(0 0 6px rgba(var(--c-primary-rgb), 0.5));
+  transition: filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Description ────────────────────────────────────────────── */
+.service-desc {
+  font-family: var(--ff-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(210, 190, 165, 0.9);
+  line-height: 1.65;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hover ──────────────────────────────────────────────────── */
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--c-primary);
+  box-shadow:
+    0 0 18px rgba(var(--c-primary-rgb), 0.5),
+    0 0 40px rgba(var(--c-primary-rgb), 0.2),
+    inset 0 0 30px rgba(var(--c-primary-rgb), 0.06);
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+.service-card:hover .cyber-corner {
+  width: 20px;
+  height: 20px;
+}
+
+.service-card:hover .service-card__glow  { opacity: 1; }
+.service-card:hover .service-card__streak { top: 100%; opacity: 1; }
+
+.service-card:hover .service-icon {
+  filter: drop-shadow(0 0 18px rgba(var(--c-primary-rgb), 1)) drop-shadow(0 0 30px rgba(var(--c-primary-rgb), 0.5));
+}
+
+.service-card:hover .service-title {
+  filter: drop-shadow(0 0 12px rgba(var(--c-primary-rgb), 0.9));
+}
+
+/* ── Keyframes ──────────────────────────────────────────────── */
+@keyframes pulse-border {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(var(--c-primary-rgb), 0.4),
+      inset 0 0 10px rgba(var(--c-primary-rgb), 0.04);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(var(--c-primary-rgb), 0.65),
+      0 0 50px rgba(var(--c-primary-rgb), 0.25),
+      inset 0 0 20px rgba(var(--c-primary-rgb), 0.1);
+  }
+}

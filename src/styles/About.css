@@ -1,0 +1,295 @@
+/* ============================================================
+   About — Lexart Studio
+   Layout géré par Bootstrap dans About.jsx
+   Ce fichier : couleurs, typographie custom, styles spécifiques
+   ============================================================ */
+
+/* ---- Photo ---- */
+
+.photo-frame {
+  border: 1px solid var(--c-primary);
+  padding: 4px;
+  background: #0d0d15;
+}
+
+.photo-frame::before {
+  content: '';
+  position: absolute;
+  top: -6px; left: -6px; right: -6px; bottom: -6px;
+  border: 1px solid rgba(var(--c-primary-rgb), 0.2);
+}
+
+.corner {
+  position: absolute;
+  width: 16px; height: 16px;
+  border-color: var(--c-primary);
+  border-style: solid;
+  z-index: 5;
+}
+.corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.corner-tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+.corner-bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+.corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.photo-img {
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.04) 3px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+.photo-hud {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 10;
+}
+
+.hud-tag {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--c-primary);
+  background: rgba(10, 10, 15, 0.85);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.4);
+  padding: 4px 8px;
+  letter-spacing: 1px;
+}
+
+.status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  margin-right: 6px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+/* ---- Stats ---- */
+
+.stats-panel { margin-top: 24px; }
+
+.stat-row { gap: 12px; margin-bottom: 14px; }
+
+.stat-label {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: rgba(var(--c-primary-rgb), 0.8);
+  width: 90px;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+}
+
+.stat-bar-bg {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-primary-light));
+  width: 0%;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.stat-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 4px; height: 100%;
+  background: #fff;
+  filter: blur(1px);
+}
+
+.stat-val {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--c-primary);
+  width: 32px;
+}
+
+/* ---- Sys bar ---- */
+
+.sys-bar {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: rgba(0, 212, 255, 0.7);
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(var(--c-primary-rgb), 0.15);
+}
+
+.sys-bar span { opacity: 0.85; }
+.sys-bar strong { opacity: 1; color: var(--c-accent-cyan); }
+
+/* ---- Fade-in ---- */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Mission principale ---- */
+
+.text-block {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--c-primary);
+}
+
+.text-block-label {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--c-primary);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.text-block p {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(224, 224, 224, 0.85);
+  margin: 0;
+}
+
+.text-block p strong { color: #fff; font-weight: 600; }
+
+/* ---- Bouton ---- */
+
+.btn-primary {
+  font-family: var(--ff-tech);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 14px 28px;
+  background: var(--c-primary);
+  color: #0a0a0f;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.btn-primary:hover {
+  background: var(--c-primary-light);
+  transform: translateY(-2px);
+  color: #0a0a0f;
+}
+
+/* ---- Tags ---- */
+
+.tags-section { gap: 12px; }
+
+.tags-category-label {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  color: rgba(var(--c-primary-rgb), 0.7);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.tags-row { gap: 8px; }
+
+.tag {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  padding: 5px 12px;
+  border: 1px solid rgba(var(--c-primary-rgb), 0.4);
+  color: var(--c-primary);
+  letter-spacing: 1px;
+  background: rgba(var(--c-primary-rgb), 0.04);
+  transition: all 0.2s;
+  cursor: default;
+}
+.tag::before { content: '> '; opacity: 0.5; }
+.tag:hover { background: rgba(var(--c-primary-rgb), 0.12); border-color: var(--c-primary); color: #fff; }
+
+.tag.cyan {
+  border-color: rgba(var(--c-accent-cyan-rgb), 0.35);
+  color: var(--c-accent-cyan);
+  background: rgba(var(--c-accent-cyan-rgb), 0.04);
+}
+.tag.cyan:hover { background: rgba(var(--c-accent-cyan-rgb), 0.1); border-color: var(--c-accent-cyan); color: #fff; }
+
+.tag.white {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.03);
+}
+.tag.white:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.3); color: #fff; }
+
+/* ---- Timeline ---- */
+
+.timeline-item { gap: 16px; padding-bottom: 24px; }
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-line {
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.timeline-dot {
+  width: 10px; height: 10px;
+  border: 2px solid var(--c-primary);
+  background: #0a0a0f;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+}
+
+.timeline-dot.active {
+  background: var(--c-primary);
+  box-shadow: 0 0 12px rgba(var(--c-primary-rgb), 0.6);
+}
+
+.timeline-connector {
+  width: 1px;
+  flex: 1;
+  background: rgba(var(--c-primary-rgb), 0.2);
+  margin-top: 4px;
+  min-height: 40px;
+}
+
+.timeline-year {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: rgba(var(--c-primary-rgb), 0.6);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.timeline-desc {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  color: rgba(224, 224, 224, 0.8);
+  line-height: 1.5;
+  font-weight: 300;
+}

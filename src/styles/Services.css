@@ -1,0 +1,20 @@
+/* ============================================================
+   Services — Lexart Studio
+   Layout géré par Bootstrap dans Services.jsx
+   ============================================================ */
+
+/* ── Scanlines de section ───────────────────────────────────── */
+.services::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(var(--c-primary-rgb), 0.012) 0px,
+    rgba(var(--c-primary-rgb), 0.012) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 0;
+}

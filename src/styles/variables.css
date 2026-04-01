@@ -1,0 +1,44 @@
+/* ============================================================
+   Variables globales — Lexart Studio
+   ============================================================ */
+
+:root {
+  --c-primary:       #ff6a00;
+  --c-primary-rgb:   255, 106, 0;
+  --c-primary-light: #ffaa00;
+  --c-accent-cyan:     #00d4ff;
+  --c-accent-cyan-rgb: 0, 212, 255;
+  --c-bg:            #0d0d0d;
+  --c-text:          #f0f0f0;
+  --ff-mono:  'Share Tech Mono', monospace;
+  --ff-tech:  'Orbitron', monospace;
+  --ff-body:  'Rajdhani', sans-serif;
+  --clip-btn:    polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  --grad-line-h: linear-gradient(90deg, transparent, var(--c-primary), transparent);
+}
+
+/* ── Coins décoratifs partagés ───────────────────────────── */
+.cyber-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--c-primary);
+  border-style: solid;
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: 5;
+}
+.cyber-corner.tl { top: 6px;    left: 6px;  border-width: 2px 0 0 2px; }
+.cyber-corner.tr { top: 6px;    right: 6px; border-width: 2px 2px 0 0; }
+.cyber-corner.bl { bottom: 6px; left: 6px;  border-width: 0 0 2px 2px; }
+.cyber-corner.br { bottom: 6px; right: 6px; border-width: 0 2px 2px 0; }
+
+/* ── Animations globales partagées ──────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+@keyframes scanMove {
+  from { background-position: 0 0; }
+  to   { background-position: 0 200px; }
+}

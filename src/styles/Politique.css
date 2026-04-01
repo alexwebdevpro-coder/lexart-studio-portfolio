@@ -1,0 +1,165 @@
+/* ============================================================
+   Politique — structure de la page
+   Layout géré par Bootstrap dans Politique.jsx
+   Ce fichier : panel, coins, effets, header, divider, footer
+   ============================================================ */
+
+
+/* ── Root panel ─────────────────────────────────────────── */
+.cp-root {
+  max-width: 820px;
+  background: #080808;
+  border: 1px solid var(--c-primary);
+  padding: 2.5rem 2rem;
+  margin: 2rem auto;
+}
+
+
+/* ── Scanlines overlay ──────────────────────────────────── */
+.cp-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(var(--c-primary-rgb), 0.018) 2px,
+    rgba(var(--c-primary-rgb), 0.018) 3px
+  );
+  pointer-events: none;
+  z-index: 0;
+  animation: scanMove 8s linear infinite;
+}
+
+/* ── Light sweep ────────────────────────────────────────── */
+.cp-sweep {
+  left: -100%;
+  width: 60%;
+  background: linear-gradient(90deg, transparent, rgba(var(--c-primary-rgb), 0.04), transparent);
+  animation: sweep 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes sweep {
+  0%   { left: -60%; }
+  100% { left: 160%; }
+}
+
+/* ── Content wrapper ────────────────────────────────────── */
+.cp-content { z-index: 1; }
+
+/* ── Logo box ───────────────────────────────────────────── */
+.cp-logo-box {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--c-primary);
+  animation: borderflicker 4s steps(1) infinite;
+}
+@keyframes borderflicker {
+  0%, 89%, 91%, 93%, 100% { border-color: var(--c-primary); opacity: 1; }
+  90%, 92%                 { border-color: #ff3a00; opacity: 0.7; }
+}
+.cp-logo-box::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 7px;
+  height: 7px;
+  background: var(--c-primary);
+  animation: pulse 2s ease-in-out infinite;
+}
+.cp-logo-box svg { width: 16px; height: 16px; }
+
+.cp-logo-text {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  color: var(--c-primary);
+  letter-spacing: 2px;
+}
+.cp-logo-text span { color: #777; }
+
+/* ── Title ──────────────────────────────────────────────── */
+.cp-title {
+  font-family: var(--ff-mono);
+  font-size: 18px;
+  color: var(--c-primary);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  animation: titleglitch 7s steps(1) infinite;
+}
+@keyframes titleglitch {
+  0%, 94%, 96%, 100% { transform: none; opacity: 1; }
+  95%                 { transform: translateX(3px) skewX(-5deg); opacity: 0.8; color: #ff3a00; }
+}
+
+.cp-subtitle {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: #777;
+  letter-spacing: 2px;
+}
+
+/* ── Status bar ─────────────────────────────────────────── */
+.cp-statusbar {
+  padding: 6px 10px;
+  border: 1px solid #1a1a1a;
+  background: rgba(var(--c-primary-rgb), 0.03);
+}
+.cp-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  flex-shrink: 0;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+.cp-status-text {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 1px;
+}
+.cp-counter {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* ── Animated divider ───────────────────────────────────── */
+.cp-divider {
+  position: relative;
+  height: 1px;
+  background: #1a1a1a;
+  margin: 1.25rem 0;
+  overflow: visible;
+}
+.cp-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 30%;
+  background: var(--c-primary);
+  animation: linescroll 3s ease-in-out infinite alternate;
+}
+@keyframes linescroll {
+  from { left: 0;   width: 20%; }
+  to   { left: 70%; width: 30%; }
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.cp-footer { margin-top: 1.25rem; }
+.cp-footer span {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .cp-root { padding: 1.5rem 1rem; }
+  .cp-title { font-size: 14px; }
+  .cp-status-text { display: none; }
+}
