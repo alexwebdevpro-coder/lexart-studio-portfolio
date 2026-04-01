@@ -34,7 +34,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="col-12 col-lg-6 d-flex justify-content-center">
+        <div className="col-12 col-lg-6 d-flex justify-content-center order-first order-lg-last">
           <div className="home-photo-wrapper position-relative">
             <img src={photo} alt="Alexis ZIRNHELT" className="home-photo w-100 h-100" />
           </div>

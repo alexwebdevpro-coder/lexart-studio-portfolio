@@ -174,3 +174,10 @@
     0 0 24px rgba(var(--c-primary-rgb), 0.5),
     0 0 60px rgba(var(--c-primary-rgb), 0.15);
 }
+
+@media (max-width: 991px) {
+  .home-photo-wrapper {
+    width: min(320px, 80vw);
+    height: min(320px, 80vw);
+  }
+}
