@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logotype from "../assets/svg/lexart_studio_logotype_v2.svg";
 import photo from "../assets/image/Photo-Home2.webp";
+import cv from "../assets/docs/CV_stage_Alexis-ZIRNHELT.pdf";
 import "../styles/Home.css";
 
 function Home() {
@@ -28,7 +29,7 @@ function Home() {
             <Link to="/portfolio" className="home-btn-primary d-inline-block text-decoration-none fw-semibold">
               Voir mes projets
             </Link>
-            <a href="#" className="home-btn-secondary d-inline-block text-decoration-none bg-transparent">
+            <a href={cv} download className="home-btn-secondary d-inline-block text-decoration-none bg-transparent">
               Télécharger mon CV
             </a>
           </div>
