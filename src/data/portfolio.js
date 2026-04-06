@@ -1,6 +1,6 @@
-import imgEden from '../assets/image/Site-Eden-Photographie.webp'
-import imgJohnDoe from '../assets/image/Desktop_John_Doe_Home.webp'
-import imgCV from '../assets/image/CV-Capture.webp'
+import imgEden from "../assets/image/Site-Eden-Photographie.webp";
+import imgJohnDoe from "../assets/image/Desktop_John_Doe_Home.webp";
+import imgCV from "../assets/image/CV-Capture.webp";
 
 export const projects = [
   {
@@ -24,10 +24,10 @@ export const projects = [
   {
     label: "PROJ-03",
     img: imgCV,
-    title: "CV Numérique",
+    title: "CV Alexis ZIRNHELT",
     desc: "Curriculum vitae au format numérique, structuré et optimisé pour une lecture rapide.",
     tags: ["HTML", "CSS"],
-    link: "#",
-    github: null,
+    link: "https://cvalexis-zirnhelt.vercel.app/",
+    github: "https://github.com/alexwebdevpro-coder/cv_alexis-zirnhelt",
   },
-]
+];
