@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { IconInstagram, IconLinkedin, IconFacebook, IconGithub } from "../ui/Icons";
+import { IconInstagram, IconLinkedin, IconGithub } from "../ui/Icons";
 import "../../styles/Footer.css";
 
 function Footer() {
@@ -16,16 +16,13 @@ function Footer() {
               Tous droits réservés.
             </p>
             <div className="d-flex gap-2">
-              <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.instagram.com/lexart.studio.webdev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <IconInstagram />
               </a>
-              <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.linkedin.com/in/alexis-zirnhelt-828965401/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <IconLinkedin />
               </a>
-              <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <IconFacebook />
-              </a>
-              <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a className="footer-social-icon d-flex align-items-center justify-content-center text-decoration-none" href="https://github.com/alexwebdevpro-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <IconGithub />
               </a>
             </div>
