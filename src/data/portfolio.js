@@ -8,7 +8,7 @@ export const projects = [
     img: imgEden,
     title: "Eden Photographie",
     desc: "Site vitrine pour une photographe professionnelle. Mise en valeur des galeries, navigation fluide et design épuré.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["React.js", "Bootstrap", "HTML", "CSS", "JavaScript"],
     link: "#",
     github: null,
   },
