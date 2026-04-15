@@ -1,5 +1,5 @@
 import imgEden from "../assets/image/Site-Eden-Photographie.webp";
-import imgJohnDoe from "../assets/image/Desktop_John_Doe_Home.webp";
+import imgKlaxon from "../assets/image/accueil_utilisateur.webp";
 import imgCV from "../assets/image/CV-Capture.webp";
 
 export const projects = [
@@ -14,12 +14,19 @@ export const projects = [
   },
   {
     label: "PROJ-02",
-    img: imgJohnDoe,
-    title: "John Doe",
-    desc: "Portfolio fictif pour un développeur web. Structure moderne, responsive et orientée conversion.",
-    tags: ["HTML", "CSS", "Bootstrap"],
+    img: imgKlaxon,
+    title: "Touche pas au klaxon",
+    desc: "Application fictive permettant de diffuser au sein de l'entreprise les trajets prévus afin de favoriser le covoiturage.",
+    tags: [
+      "PHP",
+      "PDO",
+      "Bootstrap",
+      "MySQL",
+      "izniburak/router",
+      "Apache/XAMPP",
+    ],
     link: "#",
-    github: null,
+    github: "https://github.com/alexwebdevpro-coder/touche-pas-au-klaxon",
   },
   {
     label: "PROJ-03",
